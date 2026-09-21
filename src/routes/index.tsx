@@ -100,10 +100,10 @@ function Index() {
                 <span className="shrink-0">▸</span> Wishlist on Steam
               </a>
               <a
-                href="#frames"
+                href="#systems"
                 className="inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm uppercase tracking-widest text-fog/70 ring-1 ring-fog/15 transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Recovered frames
+                See the systems
               </a>
             </div>
           </div>
@@ -141,6 +141,60 @@ function Index() {
           </div>
         </section>
 
+        {/* SYSTEMS */}
+        <section
+          id="systems"
+          className="border-t border-fog/10 px-5 py-20 sm:px-10 sm:py-28"
+        >
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <p className="mb-4 text-xs uppercase tracking-[0.3em] text-sick">
+                  02 / Systems Online
+                </p>
+                <h2 className="max-w-[28ch] text-3xl font-medium leading-tight text-balance text-fog sm:text-4xl">
+                  Everything you carry can fail you.
+                </h2>
+              </div>
+              <p className="text-[11px] uppercase tracking-widest text-fog/40">
+                diagnostics · {SYSTEMS.length} modules
+              </p>
+            </div>
+
+            <div className="grid gap-px border border-fog/10 sm:grid-cols-2 lg:grid-cols-3">
+              {SYSTEMS.map((sys, i) => (
+                <article
+                  key={sys.name}
+                  className="group relative overflow-hidden bg-void/60 p-6 outline outline-fog/10 transition-colors duration-300 hover:bg-sick/5 sm:p-8"
+                >
+                  <div className="scanline pointer-events-none absolute inset-0 opacity-20" />
+                  <div className="relative">
+                    <div className="mb-6 flex items-center justify-between text-[10px] uppercase tracking-[0.3em] text-fog/40">
+                      <span>MOD-{String(i + 1).padStart(2, "0")}</span>
+                      <span className="flex items-center gap-2 text-sick/70">
+                        <span className="size-1.5 animate-pulse rounded-full bg-sick" />
+                        {sys.status}
+                      </span>
+                    </div>
+                    <div
+                      className="crt-glow font-crt text-3xl leading-none text-sick"
+                      aria-hidden="true"
+                    >
+                      {sys.glyph}
+                    </div>
+                    <h3 className="mt-4 font-crt text-2xl uppercase leading-none text-fog">
+                      {sys.name}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-fog/55">
+                      {sys.body}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* GALLERY */}
         <section
           id="frames"
@@ -149,7 +203,7 @@ function Index() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-8 flex items-end justify-between">
               <p className="text-xs uppercase tracking-[0.3em] text-sick">
-                02 / Found Footage
+                03 / Found Footage
               </p>
               <p className="text-[11px] uppercase tracking-widest text-fog/40">
                 recovering frames…
@@ -182,7 +236,7 @@ function Index() {
         <section className="border-t border-fog/10 px-5 py-20 sm:px-10 sm:py-28">
           <div className="mx-auto max-w-4xl">
             <p className="mb-12 text-xs uppercase tracking-[0.3em] text-sick">
-              03 / Field Notes
+              04 / Field Notes
             </p>
             <div className="space-y-px">
               {NOTES.map((note) => (
@@ -241,6 +295,45 @@ function Index() {
     </div>
   );
 }
+
+const SYSTEMS = [
+  {
+    glyph: "[◉]",
+    name: "Camera System",
+    status: "rec",
+    body: "Raise the camcorder to see what the naked eye refuses. Night vision eats your battery and narrows the world to a grain-lit cone.",
+  },
+  {
+    glyph: "[※]",
+    name: "Flashlight",
+    status: "on",
+    body: "A dying beam with a real bulb to protect. Tap to flicker it back, and listen for what steps closer while it's dark.",
+  },
+  {
+    glyph: "[▤]",
+    name: "Main Menu",
+    status: "idle",
+    body: "A CRT terminal you boot into, not a screen you click past. Tapes, settings and saves live on the same degrading reel.",
+  },
+  {
+    glyph: "[✜]",
+    name: "Interaction System",
+    status: "ready",
+    body: "Grab, drag, pry and push. Doors have weight, drawers stick, and every object you move stays where you left it.",
+  },
+  {
+    glyph: "[◱]",
+    name: "Inventory & Tapes",
+    status: "sync",
+    body: "Carry only what fits. Recovered tapes can be replayed on any working deck to read the level that filmed them.",
+  },
+  {
+    glyph: "[∿]",
+    name: "Entity AI",
+    status: "trace",
+    body: "It hunts by sound and light, not by script. Turn your gear off and you become harder to find — and blind.",
+  },
+];
 
 const NOTES = [
   {
