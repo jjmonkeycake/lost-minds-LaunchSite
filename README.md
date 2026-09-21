@@ -1,23 +1,13 @@
 # Lost Minds 
 
-Create a website for a game launch based on the backrooms called Lost Minds
-
-This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://lost-minds.lovable.app
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b46cf9d7-c11d-543f-b6c3-9ceb87eae258).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+xt prompt.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
+This project was built with [Lovable,JSON,TOML,HTML,GIT]
 ```sh
 git clone <this-repository-url>
 cd <repository-name>
