@@ -160,7 +160,7 @@ function Index() {
               style={{ animation: "track 5s ease-in-out infinite" }}
             >
               {FRAMES.map((frame) => (
-                <div key={frame.cam} className="relative">
+                <figure key={frame.caption} className="relative">
                   <img
                     src={frame.src}
                     alt={frame.caption}
@@ -169,13 +169,10 @@ function Index() {
                     loading="lazy"
                     className="aspect-[16/9] w-full rounded-md object-cover outline-1 -outline-offset-1 outline-black/5"
                   />
-                  <span className="absolute left-2 top-2 text-[10px] tracking-widest text-sick/70">
-                    {frame.cam}
-                  </span>
-                  <p className="mt-2 text-[10px] uppercase leading-relaxed tracking-widest text-fog/35">
+                  <figcaption className="mt-2 text-[10px] uppercase leading-relaxed tracking-widest text-fog/35">
                     {frame.caption}
-                  </p>
-                </div>
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </div>
