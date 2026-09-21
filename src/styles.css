@@ -81,6 +81,82 @@
   text-shadow: 0 0 24px oklch(0.79 0.14 95 / 35%);
 }
 
+/* ---- rainbow CRT ---- */
+
+@utility rgb-split {
+  text-shadow:
+    -0.06em 0 oklch(0.68 0.23 25 / 70%),
+    0.06em 0 oklch(0.72 0.18 230 / 70%),
+    0 0 0.6em oklch(0.85 0.1 95 / 30%);
+}
+
+@utility rainbow-text {
+  background-image: linear-gradient(
+    100deg,
+    oklch(0.7 0.22 25),
+    oklch(0.82 0.18 70),
+    oklch(0.88 0.19 105),
+    oklch(0.8 0.18 155),
+    oklch(0.75 0.17 230),
+    oklch(0.7 0.21 300),
+    oklch(0.7 0.22 25)
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hue-drift 8s linear infinite;
+}
+
+@utility rainbow-edge {
+  background-image: linear-gradient(
+    100deg,
+    oklch(0.7 0.22 25 / 55%),
+    oklch(0.88 0.19 105 / 55%),
+    oklch(0.8 0.18 155 / 55%),
+    oklch(0.75 0.17 230 / 55%),
+    oklch(0.7 0.21 300 / 55%),
+    oklch(0.7 0.22 25 / 55%)
+  );
+  background-size: 200% 100%;
+  animation: hue-drift 10s linear infinite;
+}
+
+@utility rainbow-bars {
+  background-image: linear-gradient(
+    90deg,
+    oklch(0.75 0.2 25) 0 14.2%,
+    oklch(0.85 0.18 70) 14.2% 28.4%,
+    oklch(0.9 0.19 105) 28.4% 42.6%,
+    oklch(0.8 0.18 155) 42.6% 56.8%,
+    oklch(0.78 0.16 215) 56.8% 71%,
+    oklch(0.68 0.2 275) 71% 85.2%,
+    oklch(0.7 0.21 320) 85.2% 100%
+  );
+}
+
+@keyframes hue-drift {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes bulb {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.35;
+  }
+  46% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.5;
+  }
+}
+
 /* ---- tape motion ---- */
 
 @keyframes flick {
