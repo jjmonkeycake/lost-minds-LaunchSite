@@ -203,7 +203,7 @@ function Index() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-8 flex items-end justify-between">
               <p className="text-xs uppercase tracking-[0.3em] text-sick">
-                02 / Found Footage
+                03 / Found Footage
               </p>
               <p className="text-[11px] uppercase tracking-widest text-fog/40">
                 recovering frames…
@@ -236,7 +236,7 @@ function Index() {
         <section className="border-t border-fog/10 px-5 py-20 sm:px-10 sm:py-28">
           <div className="mx-auto max-w-4xl">
             <p className="mb-12 text-xs uppercase tracking-[0.3em] text-sick">
-              03 / Field Notes
+              04 / Field Notes
             </p>
             <div className="space-y-px">
               {NOTES.map((note) => (
@@ -295,6 +295,45 @@ function Index() {
     </div>
   );
 }
+
+const SYSTEMS = [
+  {
+    glyph: "[◉]",
+    name: "Camera System",
+    status: "rec",
+    body: "Raise the camcorder to see what the naked eye refuses. Night vision eats your battery and narrows the world to a grain-lit cone.",
+  },
+  {
+    glyph: "[※]",
+    name: "Flashlight",
+    status: "on",
+    body: "A dying beam with a real bulb to protect. Tap to flicker it back, and listen for what steps closer while it's dark.",
+  },
+  {
+    glyph: "[▤]",
+    name: "Main Menu",
+    status: "idle",
+    body: "A CRT terminal you boot into, not a screen you click past. Tapes, settings and saves live on the same degrading reel.",
+  },
+  {
+    glyph: "[✜]",
+    name: "Interaction System",
+    status: "ready",
+    body: "Grab, drag, pry and push. Doors have weight, drawers stick, and every object you move stays where you left it.",
+  },
+  {
+    glyph: "[◱]",
+    name: "Inventory & Tapes",
+    status: "sync",
+    body: "Carry only what fits. Recovered tapes can be replayed on any working deck to read the level that filmed them.",
+  },
+  {
+    glyph: "[∿]",
+    name: "Entity AI",
+    status: "trace",
+    body: "It hunts by sound and light, not by script. Turn your gear off and you become harder to find — and blind.",
+  },
+];
 
 const NOTES = [
   {
