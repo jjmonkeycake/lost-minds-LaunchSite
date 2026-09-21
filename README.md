@@ -8,7 +8,11 @@ xt prompt.
 ## Development
 
 This project was built with [Lovable,JSON,TOML,HTML,GIT]
-```sh
+
+TypeScript 97%
+CSS 2.4%
+JavaScript 0.6%
+```
 git clone <this-repository-url>
 cd <repository-name>
 npm i
