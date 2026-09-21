@@ -34,9 +34,17 @@ export const Route = createFileRoute("/")({
 const FRAMES = [
   {
     src: cam01,
-    cam: "CAM 01",
     caption: "Level 0 — intake corridor. Nothing moves. Something watches.",
   },
+  {
+    src: cam02,
+    caption: "Tape 07. The door was open in the previous frame.",
+  },
+  {
+    src: cam03,
+    caption: "Someone left a chair. No one has worked here for years.",
+  },
+];
 
 function Index() {
   return (
